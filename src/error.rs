@@ -10,6 +10,8 @@ pub enum ComponentError {
     RuntimeError(String),
     #[error("IO error: {0}")]
     IoError(#[from] std::io::Error),
+    #[error("Anyhow error: {0}")]
+    AnyhowError(#[from] anyhow::Error),
 }
 
 pub type Result<T> = std::result::Result<T, ComponentError>;

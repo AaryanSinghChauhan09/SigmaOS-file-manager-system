@@ -9,7 +9,7 @@ use config::Config;
 use service::Service;
 use window::{WindowManager, Rect};
 use file::FileManager;
-use theme::{ThemeManager, Theme, ColorPalette, Color};
+use theme::{ThemeManager, Theme};
 use anyhow::Result;
 
 fn main() -> Result<()> {
@@ -25,7 +25,7 @@ fn main() -> Result<()> {
     let mut wm = WindowManager::new();
     let rect = Rect::new(100, 100, 800, 600);
     let window_id = wm.create_window("Test Window".to_string(), rect);
-    wm.focus_window(window_id)?;
+    wm.focus_window(window_id).map_err(|e| anyhow::anyhow!(e))?;
     println!("Window created and focused: {}", window_id);
     
     // Demonstrate file management
@@ -37,7 +37,7 @@ fn main() -> Result<()> {
     let mut tm = ThemeManager::new();
     let theme = Theme::new("SigmaOS Default".to_string());
     tm.add_theme(theme);
-    tm.set_current_theme("SigmaOS Default")?;
+    tm.set_current_theme("SigmaOS Default").map_err(|e| anyhow::anyhow!(e))?;
     println!("Theme set successfully");
     
     service.stop()?;
