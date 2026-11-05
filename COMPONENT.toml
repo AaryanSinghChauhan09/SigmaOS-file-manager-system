@@ -1,0 +1,9 @@
+[component]
+name = "SigmaOS-file-manager-system"
+description = "SigmaOS subsystem component for file-manager-system"
+version = "0.1.0"
+tier = 0
+
+[capabilities]
+contract_version = "1.0.0"
+principles = ["DRY", "KISS", "SOLID", "Arrange-Act-Assert", "Pristine-Sources"]
