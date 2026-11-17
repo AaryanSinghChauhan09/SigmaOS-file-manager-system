@@ -1,6 +1,6 @@
 [component]
 name = "SigmaOS-file-manager-system"
-description = "SigmaOS subsystem component for file-manager-system"
+description = "File manager (nemo-style, tabs, extensions)"
 version = "0.1.0"
 tier = 0
 
