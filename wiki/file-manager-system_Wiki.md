@@ -1,18 +1,18 @@
-# SigmaOS-SigmaOS-file-manager-system Component Wiki
+# SigmaOS-file-manager-system Component Wiki
 
 ## Overview
-SigmaOS-SigmaOS-file-manager-system provides File manager (nemo-style, tabs, extensions) for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
+SigmaOS-file-manager-system provides component for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
-- Single Responsibility
-- SigmaOS-file-manager-system Abstraction
-- Fail-Fast on SigmaOS-file-manager-system Initialization Errors
-- Deterministic SigmaOS-file-manager-system Setup
-- Clear Abstraction Over SigmaOS-file-manager-system APIs
-- Composition over Inheritance for SigmaOS-file-manager-system extensions
+- **Single Responsibility**: Each component has a single well-defined purpose
+- **SigmaOS-file-manager-system Abstraction**: Clear abstraction over the component's APIs and functionality
+- **Fail-Fast on SigmaOS-file-manager-system Initialization Errors**: Fail-fast principle for initialization errors
+- **Deterministic SigmaOS-file-manager-system Setup**: Deterministic initialization and configuration
+- **Clear Abstraction Over SigmaOS-file-manager-system APIs**: Well-defined, clear APIs
+- **Composition over Inheritance for SigmaOS-file-manager-system extensions**: Use composition patterns for extensions
 
 ## Architecture
-SigmaOS-SigmaOS-file-manager-system follows a SigmaOS-file-manager-system pattern:
+SigmaOS-file-manager-system follows a SigmaOS-file-manager-system pattern:
 - **SigmaOS-file-manager-system Core**: Provides SigmaOS-file-manager-system support, SigmaOS-file-manager-system management, and SigmaOS-file-manager-system tracking
 - **Management**: Supports SigmaOS-file-manager-system management, SigmaOS-file-manager-system configuration, and SigmaOS-file-manager-system lifecycle
 - **Tracking**: Supports SigmaOS-file-manager-system status, SigmaOS-file-manager-system tracking, and SigmaOS-file-manager-system lifecycle
@@ -20,10 +20,10 @@ SigmaOS-SigmaOS-file-manager-system follows a SigmaOS-file-manager-system patter
 
 ## API
 The component provides the following public APIs:
--  - Manage a SigmaOS-file-manager-system by given configuration
--  - Register a SigmaOS-file-manager-system by given name
--  - Get SigmaOS-file-manager-system status and SigmaOS-file-manager-system availability
--  - Track SigmaOS-file-manager-system management and SigmaOS-file-manager-system tracking
+- Manage a SigmaOS-file-manager-system by given configuration
+- Register a SigmaOS-file-manager-system by given name
+- Get SigmaOS-file-manager-system status and SigmaOS-file-manager-system availability
+- Track SigmaOS-file-manager-system management and SigmaOS-file-manager-system tracking
 - Error types for SigmaOS-file-manager-system failure scenarios or unsupported SigmaOS-file-manager-system types
 
 ## Test Structure (Arrange-Act-ASSERT)
@@ -32,11 +32,8 @@ All tests follow the AAA pattern:
 2. **Act**: Execute the code under test (SigmaOS-file-manager-system init, SigmaOS-file-manager-system management)
 3. **Assert**: Verify the expected SigmaOS-file-manager-system results
 
-Example:
-
-
 ## Development
-- Follows Rust best practices with 
+- Follows best practices with clear abstraction boundaries
 - SigmaOS-file-manager-system initialization is best-effort; gracefully degrades on unsupported configurations
 - Comprehensive error types for all SigmaOS-file-manager-system failure scenarios
 - Unit tests provided for SigmaOS-file-manager-system management and configuration
